@@ -14,5 +14,7 @@ RUN apt-get update && apt-get install -y nano
 # Copiamos el index.html al directorio por defecto del servidor web
 COPY index.html /usr/local/apache2/htdocs/
 
+#  agregar la carpeta dockerfile de manera automatica 
+COPY html /usr/local/apache2/htdocs/proyecto
 # Exponemos el puerto 80
 EXPOSE 80
